@@ -16,7 +16,10 @@ rightsRouter.get("/",async(req,res)=>{
    
     const rights=await RightsModel.find({_id:req.body.right_id}).populate("staff_id");
     res.send(rights);
+
 })
+
+
 
 module.exports={
     rightsRouter
